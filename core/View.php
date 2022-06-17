@@ -1,8 +1,7 @@
 <?php
 	namespace Core;
 	
-	class View
-	{
+	class View {
 		public function render(Page $page) {
 			return $this->renderLayout($page, $this->renderView($page));
 		}
@@ -19,7 +18,7 @@
 				echo "Не найден файл с лейаутом по пути $layoutPath"; die();
 			}
 		}
-		
+
 		private function renderView(Page $page) {
 			if ($page->view) {
 				$viewPath = $_SERVER['DOCUMENT_ROOT'] . "/project/views/{$page->view}.php";

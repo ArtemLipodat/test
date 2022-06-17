@@ -3,11 +3,13 @@
 
 namespace Project\Controllers;
 use \Core\Controller;
+use Core\View;
 use Project\Models\Data;
 use Project\Models\Main;
 
 class DataController extends Controller {
 
+    private $child;
 
     function data() {
         $this->title = 'Главная';
@@ -15,10 +17,6 @@ class DataController extends Controller {
         $id = $_GET['id'];
 
         $model = new Data();
-        $mainModel = new Main();
-
-        $dom = $mainModel->getDom();
-
         $child = $model->getChildById($id);
 
         $count = [];
@@ -26,11 +24,25 @@ class DataController extends Controller {
             $count[$v['id']] = $model->getCount($v['id'])[0];
         }
 
-        var_dump($count);
+        $a = [];
+        foreach ($child as $k => $v) {
+            if ($count[$v['id']]) {
+                $a[] = array_merge($v, $count[$v['id']]);
+            }
+        }
+        return json_encode($a);
 
-        return $this->render('main/main', ['child' => $child, 'dom' => $dom, 'childCount' => $count]);
     }
 
 
-
+    function desc() {
+        $model = new Data();
+        if (isset($_GET['id'])) {
+            return json_encode($model->getDesc($_GET['id']));
+        } elseif (isset($_GET['child'])) {
+            return json_encode($model->getDescChild($_GET['child']));
+        } else {
+            return json_encode([]);
+        }
+    }
 }

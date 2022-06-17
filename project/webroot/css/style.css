@@ -1,3 +1,24 @@
+.desc {
+  min-height: 200px;
+  border: 1px solid red;
+  min-width: 200px;
+}
+.list {
+  color: #000;
+  font-size: 16px;
+  padding: 5px;
+  cursor: pointer;
+}
+.list_item {
+  display: flex;
+  align-items: center;
+}
+.list_item span {
+  border: 1px solid blue;
+  padding: 5px;
+  display: block;
+  cursor: pointer;
+}
 .wrapper {
   display: flex;
   align-items: center;

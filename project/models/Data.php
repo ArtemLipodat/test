@@ -7,7 +7,7 @@ use \Core\Model;
 class Data extends Model {
 
     function getChildById($id) {
-        $sql = "SELECT `name`, `desc`, `id` FROM `dom_child` where `dom_id` = '$id'";
+        $sql = "SELECT `name`, `desc`, `id`, `dom_id` FROM `dom_child` where `dom_id` = '$id'";
         return $this->findMany($sql);
     }
 
@@ -16,5 +16,14 @@ class Data extends Model {
         return $this->findMany($sql);
     }
 
+    function getDesc($id) {
+        $sql = "SELECT `desc` FROM `dom` where `id` = '$id'";
+        return $this->findOne($sql);
+    }
+
+    function getDescChild($id) {
+        $sql = "SELECT `desc` FROM `dom_child` where `id` = '$id'";
+        return $this->findOne($sql);
+    }
 
 }

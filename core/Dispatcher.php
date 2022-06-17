@@ -1,10 +1,8 @@
 <?php
 	namespace Core;
 	
-	class Dispatcher
-	{
-		public function getPage(Track $track)
-		{
+	class Dispatcher {
+		public function getPage(Track $track) {
 			$className = ucfirst($track->controller) . 'Controller';
 			$fullName = "\\Project\\Controllers\\$className";
 			

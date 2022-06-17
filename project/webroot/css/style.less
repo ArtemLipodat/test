@@ -1,6 +1,29 @@
 @black: #000;
 @fontSize: 16px;
 
+.desc{
+  min-height: 200px;
+  border: 1px solid red;
+  min-width: 200px;
+}
+
+.list{
+  color: @black;
+  font-size: @fontSize;
+  padding: 5px;
+  cursor: pointer;
+  &_item{
+    display: flex;
+    align-items: center;
+    span{
+      border: 1px solid blue;
+      padding: 5px;
+      display: block;
+      cursor: pointer;
+    }
+  }
+}
+
 .wrapper{
   display: flex;
   align-items: center;

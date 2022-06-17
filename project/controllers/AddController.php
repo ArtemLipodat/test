@@ -43,7 +43,7 @@ class AddController extends Controller {
 
 
         //Создаем раздел
-        else if (!$dom_child && $dom){
+        else if (!$dom_child && !$dom){
             $sql = "INSERT INTO `dom` (`name`, `desc`) VALUES ('$name', '$desc')";
 
             $id = $this->insert($sql)->insert_id;
