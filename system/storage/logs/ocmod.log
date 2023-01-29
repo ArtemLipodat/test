@@ -1,0 +1,307 @@
+2023-01-29 11:55:28 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: OcStore 2.3.x track number
+
+FILE: admin/controller/sale/order.php
+CODE: $data['shipping_method'] = $order_info['shipping_method'];
+LINE: 567
+LINE: 942
+CODE: public function history() {
+LINE: 1545
+
+FILE: admin/model/sale/order.php
+CODE: $order_query->row['order_id'],
+LINE: 96
+
+FILE: catalog/model/checkout/order.php
+CODE: $order_query->row['order_id'],
+LINE: 170
+
+FILE: admin/view/template/sale/order_info.tpl
+CODE: <td><?php echo $text_reward; ?></td>
+LINE: 100
+CODE: <?php echo $footer; ?>
+LINE: 700
+
+FILE: catalog/model/account/order.php
+CODE: $order_query->row['order_id'],
+LINE: 46
+
+FILE: catalog/controller/account/order.php
+CODE: if ($order_info['invoice_no']) {
+LINE: 205
+
+FILE: catalog/view/theme/default/template/account/order_info.tpl
+CODE: <b><?php echo $text_shipping_method; ?></b> <?php echo $shipping_method; ?>
+LINE: 49
+----------------------------------------------------------------
+2023-01-29 11:55:38 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: OcStore 2.3.x track number
+
+FILE: admin/controller/sale/order.php
+CODE: $data['shipping_method'] = $order_info['shipping_method'];
+LINE: 567
+LINE: 942
+CODE: public function history() {
+LINE: 1545
+
+FILE: admin/model/sale/order.php
+CODE: $order_query->row['order_id'],
+LINE: 96
+
+FILE: catalog/model/checkout/order.php
+CODE: $order_query->row['order_id'],
+LINE: 170
+
+FILE: admin/view/template/sale/order_info.tpl
+CODE: <td><?php echo $text_reward; ?></td>
+LINE: 100
+CODE: <?php echo $footer; ?>
+LINE: 700
+
+FILE: catalog/model/account/order.php
+CODE: $order_query->row['order_id'],
+LINE: 46
+
+FILE: catalog/controller/account/order.php
+CODE: if ($order_info['invoice_no']) {
+LINE: 205
+
+FILE: catalog/view/theme/default/template/account/order_info.tpl
+CODE: <b><?php echo $text_shipping_method; ?></b> <?php echo $shipping_method; ?>
+LINE: 49
+----------------------------------------------------------------
+2023-01-29 11:56:04 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: OcStore 2.3.x track number
+
+FILE: admin/controller/sale/order.php
+CODE: $data['shipping_method'] = $order_info['shipping_method'];
+LINE: 567
+LINE: 942
+CODE: public function history() {
+LINE: 1545
+
+FILE: admin/model/sale/order.php
+CODE: $order_query->row['order_id'],
+LINE: 96
+
+FILE: catalog/model/checkout/order.php
+CODE: $order_query->row['order_id'],
+LINE: 170
+
+FILE: admin/view/template/sale/order_info.tpl
+CODE: <td><?php echo $text_reward; ?></td>
+LINE: 100
+CODE: <?php echo $footer; ?>
+LINE: 700
+
+FILE: catalog/model/account/order.php
+CODE: $order_query->row['order_id'],
+LINE: 46
+
+FILE: catalog/controller/account/order.php
+CODE: if ($order_info['invoice_no']) {
+LINE: 205
+
+FILE: catalog/view/theme/default/template/account/order_info.tpl
+CODE: <b><?php echo $text_shipping_method; ?></b> <?php echo $shipping_method; ?>
+LINE: 49
+----------------------------------------------------------------
+MOD: DEV-OPENCART.COM - Падающий снег на сайте
+
+FILE: catalog/controller/common/footer.php
+CODE: $data['informations'] = array();
+LINE: 39
+
+FILE: catalog/view/theme/default/template/common/footer.tpl
+CODE: </body>
+LINE: 73
+----------------------------------------------------------------
+MOD: Специальный таймер
+
+FILE: catalog/view/theme/default/template/product/special.tpl
+CODE: <?php echo $footer; ?>
+LINE: 115
+CODE: <p><?php echo $product['description']; ?></p>
+LINE: 67
+
+FILE: catalog/view/theme/default/template/product/product.tpl
+CODE: <?php echo $footer; ?>
+LINE: 602
+CODE: <h1><?php echo $heading_title; ?></h1>
+LINE: 125
+
+FILE: catalog/view/theme/default/template/product/category.tpl
+CODE: <?php echo $footer; ?>
+LINE: 153
+CODE: <p><?php echo $product['description']; ?></p>
+LINE: 104
+
+FILE: catalog/view/theme/default/template/product/search.tpl
+CODE: <?php echo $footer; ?>
+LINE: 211
+CODE: <p><?php echo $product['description']; ?></p>
+LINE: 119
+
+FILE: catalog/view/theme/default/template/extension/module/special.tpl
+CODE: <h3><?php echo $heading_title; ?></h3>
+LINE: 0
+CODE: <p><?php echo $product['description']; ?></p>
+LINE: 16
+
+FILE: catalog/view/theme/default/template/extension/module/latest.tpl
+CODE: <h3><?php echo $heading_title; ?></h3>
+LINE: 0
+CODE: <p><?php echo $product['description']; ?></p>
+LINE: 16
+
+FILE: catalog/view/theme/default/template/extension/module/featured.tpl
+CODE: <h3><?php echo $heading_title; ?></h3>
+LINE: 0
+CODE: <p><?php echo $product['description']; ?></p>
+LINE: 16
+
+FILE: catalog/model/catalog/product.php
+CODE: public function getTotalProductSpecials() {
+LINE: 549
+
+FILE: catalog/controller/product/product.php
+CODE: $data['rating'] = (int)$product_info['rating'];
+LINE: 403
+CODE: public function index() {
+LINE: 8
+
+FILE: catalog/controller/product/special.php
+CODE: $data['products'][] = array(
+LINE: 132
+CODE: public function index() {
+LINE: 6
+
+FILE: catalog/controller/product/search.php
+CODE: $data['products'][] = array(
+LINE: 247
+CODE: public function index() {
+LINE: 6
+
+FILE: catalog/controller/product/category.php
+CODE: $data['products'][] = array(
+LINE: 224
+CODE: public function index() {
+LINE: 6
+
+FILE: catalog/controller/extension/module/featured.php
+CODE: $data['products'][] = array(
+LINE: 61
+CODE: public function index($setting) {
+LINE: 10
+
+FILE: catalog/controller/extension/module/special.php
+CODE: $data['products'][] = array(
+LINE: 61
+CODE: public function index($setting) {
+LINE: 10
+
+FILE: catalog/controller/extension/module/latest.php
+CODE: $data['products'][] = array(
+LINE: 61
+CODE: public function index($setting) {
+LINE: 10
+----------------------------------------------------------------

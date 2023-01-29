@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+<name>DEV-OPENCART.COM - Падающий снег на сайте</name>
+<version>1</version>
+<link>https://DEV-OPENCART.COM</link>
+<author>DEV-OPENCART.COM</author>
+<code>dev_opencart_com_snow</code>
+<file path="catalog/controller/common/footer.php">
+    <operation error="skip">
+        <search><![CDATA[$data['informations'] = array();]]></search>
+        <add position="before"><![CDATA[
+        // SNOW DEV-OPENCART
+        $data['module_snowfall_status'] = $this->config->get('module_snowfall_status');
+        $data['module_snowfall_flakeсount'] = $this->config->get('module_snowfall_flakeсount');
+        $data['module_snowfall_flakecolor'] = $this->config->get('module_snowfall_flakecolor');
+        $data['module_snowfall_flakeindex'] = $this->config->get('module_snowfall_flakeindex');
+        $data['module_snowfall_minsize'] = $this->config->get('module_snowfall_minsize');
+        $data['module_snowfall_maxsize'] = $this->config->get('module_snowfall_maxsize');
+        $data['module_snowfall_minspeed'] = $this->config->get('module_snowfall_minspeed');
+        $data['module_snowfall_maxspeed'] = $this->config->get('module_snowfall_maxspeed');
+        $data['module_snowfall_round'] = $this->config->get('module_snowfall_round');
+        $data['module_snowfall_shadow'] = $this->config->get('module_snowfall_shadow');
+        $data['module_snowfall_collection'] = $this->config->get('module_snowfall_collection');
+        //
+        ]]></add>
+    </operation>
+</file>
+<!--3.x-->
+<file path="catalog/view/theme/*/template/common/footer.twig">
+    <operation error="skip">
+        <search><![CDATA[</body>]]></search>
+        <add position="before"><![CDATA[
+        <!-- SNOW DEV-OPENCART.COM -->
+        {% if module_snowfall_status == 1 %}
+        <script src="catalog/view/javascript/snowfall.js"></script>
+		<script>
+		    $(document).ready(function(){
+		        $(document).snowfall({
+		            flakeCount: {{ module_snowfall_flakeсount }},
+		            flakeColor: '{{ module_snowfall_flakecolor }}',
+		            flakeIndex: {{ module_snowfall_flakeindex }},
+		            minSize: {{ module_snowfall_minsize }}, 
+		            maxSize: {{ module_snowfall_maxsize }},
+		            minSpeed: {{ module_snowfall_minspeed }},
+		            maxSpeed: {{ module_snowfall_maxspeed }},
+		            round: {% if module_snowfall_round == 1 %}true{% else %}false{% endif %},
+		            shadow: {% if module_snowfall_shadow == 1 %}true{% else %}false{% endif %},
+		            collection: '{{ module_snowfall_collection }}'
+		        });
+		    });
+		</script>
+		{% endif %}
+		<!-- SNOW DEV-OPENCART.COM -->
+        ]]></add>
+    </operation>
+</file>
+<!--2.x-->
+<file path="catalog/view/theme/*/template/common/footer.tpl">
+    <operation error="skip">
+        <search><![CDATA[</body>]]></search>
+        <add position="before"><![CDATA[
+        <!-- SNOW DEV-OPENCART.COM -->
+        <script src="catalog/view/javascript/snowfall.js"></script>
+		<script>
+		    $(document).ready(function(){
+		        $(document).snowfall({
+		            flakeCount: <?php echo $module_snowfall_flakeсount; ?>,
+		            flakeColor: '<?php echo $module_snowfall_flakecolor; ?>',
+		            flakeIndex: <?php echo $module_snowfall_flakeindex; ?>,
+		            minSize: <?php echo $module_snowfall_minsize; ?>, 
+		            maxSize: <?php echo $module_snowfall_maxsize; ?>,
+		            minSpeed: <?php echo $module_snowfall_minspeed; ?>,
+		            maxSpeed: <?php echo $module_snowfall_maxspeed; ?>,
+		            round: <?php if($module_snowfall_round == 1) { ?>true<?php } else { ?>false<?php } ?>,
+		            shadow: <?php if($module_snowfall_shadow == 1) { ?>true<?php } else { ?>false<?php } ?>,
+		            collection: '<?php echo $module_snowfall_collection; ?>'
+		        });
+		    });
+		</script>
+		<!-- SNOW DEV-OPENCART.COM -->
+        ]]></add>
+    </operation>
+</file>
+</modification>
